@@ -60,7 +60,7 @@
     hard:   'Expectimax depth 5 — tough opponent',
   };
   const AI_DEPTHS = { easy: 0, medium: 3, hard: 5 };
-  const AI_LABELS = { easy: 'Easy AI', medium: 'Medium AI', hard: 'Hard AI' };
+  const AI_LABELS = { easy: 'MELISSA AI', medium: 'MELISSA AI', hard: 'MELISSA AI' };
 
   /* ══════════════════════════════════════════
      SCOREBOARD  (localStorage)
@@ -419,13 +419,11 @@
       gameBanner.classList.add('banner-solo');
       html = `🎮 ${esc(S.names[0])} — reach <strong>2048!</strong>`;
     } else if (S.mode === 'ai') {
-      const labels = { easy:'Easy', medium:'Medium', hard:'Hard' };
       gameBanner.classList.add('banner-ai');
-      html = `👁️ Watching ${labels[S.diff]} AI play`;
+      html = `👁️ Watching MELISSA AI play`;
     } else if (S.mode === 'vs-ai') {
-      const labels = { easy:'Easy', medium:'Medium', hard:'Hard' };
       gameBanner.classList.add('banner-vs-ai');
-      html = `🤖 ${esc(S.names[0])} vs ${labels[S.diff]} AI`;
+      html = `🤖 ${esc(S.names[0])} vs MELISSA AI`;
     } else if (S.mode === 'vs-friend') {
       if (S.turn === 0) {
         gameBanner.classList.add('banner-p1');
@@ -596,7 +594,7 @@
         goTitle.textContent = S.mode === 'vs-ai' ? `${esc(S.names[0])} Wins!` : `${esc(S.names[0])} Wins!`;
       } else if (scores[1] > scores[0]) {
         goEmoji.textContent = S.mode === 'vs-ai' ? '🤖' : '🥇';
-        goTitle.textContent = S.mode === 'vs-ai' ? 'AI Wins!' : `${esc(S.names[1])} Wins!`;
+        goTitle.textContent = S.mode === 'vs-ai' ? 'MELISSA AI Wins!' : `${esc(S.names[1])} Wins!`;
       } else {
         goEmoji.textContent = '🤝';
         goTitle.textContent = "It's a Tie!";
